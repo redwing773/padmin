@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>admin test</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../resources/css/reset.css">
+	<link rel="stylesheet" href="../resources/css/layout.css">
+	<link rel="stylesheet" href="../resources/css/common.css">
+	<link rel="stylesheet" href="../resources/css/jquery-ui.css">
+	<script src="../resources/js/jquery-1.12.4.min.js"></script>
+	<script src="../resources/js/jquery-ui.min.js"></script>
+	<script src="../resources/js/admin.js"></script>
+</head>
+
+<body>
+	<div id="wrap">
+		<div id="header" class="clearfix">
+			<h1 class="logo">
+				<a href="#none" class="">
+					<img src="../resources/img/poscointer.png" alt="logo">
+					<span>철강 e-MarketPlace 서비스 관리</span>
+				</a>
+			</h1>
+			<div class="fr">
+				<span class="user_name">[<em>포스코</em>]님 환영합니다.</span>
+				<button type="button" class="btn_logout">로그아웃</button>
+			</div>
+		</div>
+		<div id="container">
+			<div id="nav" class="open">
+				<div class="nav_inner">
+					<div class="nav_top">
+						<img src="../resources/img/withposco.png" alt="With Posco">
+					</div>
+					<ul class="list_menu">
+						<li><a href="#none">업무관리</a>
+							<ul class="list_menu_2dep">
+								<li><a href="#none">시스템관리</a>
+									<ul class="list_menu_3dep">
+										<li><a href="#none" rel="doc1" class="item">공통코드관리</a></li>
+									</ul>
+								</li>
+								<li><a href="#none">권한관리</a>
+									<ul class="list_menu_3dep">
+										<li><a href="#none" rel="doc2" class="item">객체관리</a></li>
+										<li><a href="#none" rel="doc3" class="item">공통코드관리</a></li>
+										<li><a href="#none" rel="doc4" class="item">권한그룹별 객체설정</a></li>
+										<li><a href="#none" rel="doc5" class="item">사용자별 권란그룹설정</a></li>
+										<li><a href="#none" rel="doc6" class="item">사용자별 객체설정</a></li>
+										<li><a href="#none" rel="doc7" class="item">객체 이력관리</a></li>
+										<li><a href="#none" rel="doc8" class="item">권한그룹 이력관리</a></li>
+										<li><a href="#none" rel="doc9" class="item">권한그룹 객체매핑 이력관리</a></li>
+										<li><a href="#none" rel="doc10" class="item">사용자객체매핑 이력관리</a></li>
+										<li><a href="#none" rel="doc11" class="item">사용자메뉴매핑 이력관리</a></li>
+									</ul>
+								</li>
+								<li><a href="#none">사용자관리</a>
+									<ul class="list_menu_3dep">
+										<li><a href="#none" rel="doc12" class="item">사용자관리</a></li>
+										<li><a href="#none" rel="doc13" class="item">로그인 이력관리</a></li>
+									</ul>
+								</li>
+								<li><a href="#none">회사관리</a>
+									<ul class="list_menu_3dep">
+										<li><a href="#none" rel="doc14" class="item">구매사관리</a></li>
+										<li><a href="#none" rel="doc15" class="item">운송사관리</a></li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+						<li><a href="#none">1depth menu2</a>
+							<ul class="list_menu_2dep">
+								<li><a href="#none">1-2depth menu1</a>
+									<ul class="list_menu_3dep">
+										<li><a href="#none" rel="doc16" class="item">1-2-3depth menu1</a></li>
+										<li><a href="#none" rel="doc17" class="item">1-2-3depth menu2</a></li>
+										<li><a href="#none" rel="doc18" class="item">1-2-3depth menu3</a></li>
+									</ul>
+								</li>
+								<li><a href="#none" rel="doc19" class="item">1-2depth menu2</a></li>
+							</ul>
+						</li>
+						<li><a href="#none" rel="doc20" class="item">1depth menu3</a></li>
+						<li><a href="#none" rel="doc21" class="item">1depth menu4</a></li>
+					</ul>
+				</div>
+				<div class="btn_menu ico_btn_menu">메뉴닫기</div>
+			</div>
+
+			<div id="content">
+				<div class="tab_nav_wrap">
+					<div class="tab_nav_inner">
+						<ul class="list_tab_nav">
+							<li class="current">
+								<a href="#none" class="tab" id="doc1" role="tab" title="공통코드관리">공통코드관리</a>
+								<span class="btn_tabclose ico_tabclose" role="presentation">탭 닫기</span>
+							</li>
+						</ul>
+					</div>
+					<div class="btn_wrap btn_tab_ctrl">
+						<button type="button" class="btn_tab_prev ico_tab_prev"><span>이전탭</span></button>
+						<button type="button" class="btn_tab_next ico_tab_next"><span>다음탭</span></button>
+						<button type="button" class="btn_tab_close ico_tab_closeall"><span>전체닫기</span></button>
+					</div>
+				</div>
+				<!-- [end]cnt_wrap -->
+			</div>
+			<!-- [end]content -->
+			<div id="footer">
+				<p>footer</p>
+			</div>
+		</div><!-- [end]container -->
+	</div><!-- [end]wrap -->
+</body>
+
+</html>

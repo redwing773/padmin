@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>cnt_wrap</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../resources/css/reset.css">
+	<link rel="stylesheet" href="../resources/css/layout.css">
+	<link rel="stylesheet" href="../resources/css/common.css">
+	<link rel="stylesheet" href="../resources/css/jquery-ui.css">
+	<script src="../resources/js/jquery-1.12.4.min.js"></script>
+	<script src="../resources/js/jquery-ui.min.js"></script>
+	<script src="../resources/js/admin.js"></script>
+</head>
+
+<body>
+
+	<div id="" class="cnt_wrap">
+		<div class="cnt">
+			<div class="title">
+				<div class="title-label">공통코드관리</div>
+				<div class="title-markuparea">
+					<button type="button" class="buttonStyle">검색</button>
+					<button type="button" class="buttonStyle">추가</button>
+					<button type="button" class="buttonStyle">저장</button>
+					<button type="button" class="buttonStyle">삭제</button>
+				</div>
+			</div>
+			<div class="tbl_wrap">
+				<table class="tbl tbl_frm">
+					<caption></caption>
+					<colgroup>
+						<col span="12" style="width:8.3%" />
+					</colgroup>
+					<tbody class="tbodywrap close">
+						<!-- 상세검색이 있는 기본 행 -->
+						<tr class="col1">
+							<th scope="row">제품명</th>
+							<td>
+								<input type="text" class="inp_txt" placeholder="제품번호를 입력하세요">
+							</td>
+							<td>
+								<div class="btn_area fr">
+									<button type="button" id="detailsearch" class="btn_detail">
+										<span class="btn_detail_text">상세검색</span>
+										<span class="ico_btn_detail"></span>
+									</button>
+								</div>
+							</td>
+						</tr>
+						<!-- //상세검색이 있는 기본 행 -->
+						
+						<!-- 2열 구성 행 -->
+						<tr class="col2">
+							<th scope="row">대상구분</th>
+							<td>
+								<select class="sel">
+									<option value="전체" selected="selected">전체</option>
+									<option>1</option>
+									<option>2</option>
+								</select>
+								<span class="selected ico_selected"></span>
+							</td>
+							<th scope="row">경매이력</th>
+							<td>
+								<div class="inp_wrap type_search">
+									<input type="text" class="inp_txt" placeholder="검색어를 입력하세요">
+									<button type="button" class="btn_search ico_search" title="검색"></button>
+								</div>
+							</td>
+						</tr>
+						<!-- //2열 구성 행 -->
+
+						<!-- 3열 구성 행 -->
+						<tr class="col3">
+							<th scope="row">두께(mm)</th>
+							<td>
+								<div class="inp_wrap type_col">
+									<input type="text" class="inp_txt ta_r" value="0">
+									<span>~</span>
+									<input type="text" class="inp_txt ta_r" value="0">
+								</div>
+							</td>
+							<th scope="row">폭(mm)</th>
+							<td>
+								<div class="inp_wrap type_col">
+									<input type="text" class="inp_txt ta_r" value="0">
+									<span>~</span>
+									<input type="text" class="inp_txt ta_r" value="0">
+								</div>
+							</td>
+							<th scope="row">중량(kg)</th>
+							<td>
+								<div class="inp_wrap type_col">
+									<input type="text" class="inp_txt ta_r" value="0"> <span>~</span>
+									<input type="text" class="inp_txt ta_r" value="0">
+								</div>
+							</td>
+						</tr>
+						<!-- //3열 구성 행 -->
+
+						<!-- 2열 구성 행 -->
+						<tr class="col2">
+							<th scope="row">입고일</th>
+							<td>
+								<div class="inp_wrap type_col">
+									<div class="inp_area">
+										<label for="form" class="hidden">시작일</label>
+										<input type="text" id="datepicker" name="from" class="inp_cal">
+									</div>
+									<span>~</span>
+									<div class="inp_area">
+										<label for="to" class="hidden">종료일</label>
+										<input type="text" id="datepicker2" name="to" class="inp_cal">
+									</div>
+								</div>
+							</td>
+							<th scope="row">판매입고일</th>
+							<td></td>
+						</tr>
+						<!-- //2열 구성 행 -->
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<!-- 그리드 1개일 경우-->
+		<!-- <div class="grid_wrap gridtype1">
+			<div class="cnt grid_one">
+				<div class="title">
+					<div class="title-label">그리드타이틀1</div>
+					<div class="title-markuparea">
+						<button type="button" class="buttonStyle">검색</button>
+						<button type="button" class="buttonStyle">추가</button>
+						<button type="button" class="buttonStyle">저장</button>
+						<button type="button" class="buttonStyle">삭제</button>
+					</div>
+				</div>
+				<div>그리드영역</div>
+			</div>
+		</div> -->
+		<!-- //그리드 1개일 경우-->
+		
+		<!-- 그리드 좌우로 2개일 경우-->
+		<!-- <div class="grid_wrap gridtype2">
+			<div class="cnt_half_wrap">
+				<div class="cnt cnt_half grid_a">
+					<div class="title">
+						<div class="title-label">그리드타이틀a</div>
+						<div class="title-markuparea">
+							<button type="button" class="buttonStyle">검색</button>
+							<button type="button" class="buttonStyle">추가</button>
+							<button type="button" class="buttonStyle">저장</button>
+							<button type="button" class="buttonStyle">삭제</button>
+						</div>
+					</div>
+					<div>그리드영역</div>
+				</div>
+				<div class="cnt cnt_half grid_b">
+					<div class="title">
+						<div class="title-label">그리드타이틀b</div>
+						<div class="title-markuparea">
+							<button type="button" class="buttonStyle">검색</button>
+							<button type="button" class="buttonStyle">추가</button>
+							<button type="button" class="buttonStyle">저장</button>
+							<button type="button" class="buttonStyle">삭제</button>
+						</div>
+					</div>
+					<div>그리드영역</div>
+				</div>
+			</div>
+		</div> -->
+		<!-- //그리드 좌우로 2개일 경우-->
+
+		<!-- 그리드 3개일(상1,하2) 경우 -->
+		<!-- <div class="grid_wrap gridtype3">
+			<div class="cnt grid_one">
+				<div class="title">
+					<div class="title-label">그리드타이틀1</div>
+					<div class="title-markuparea">
+						<button type="button" class="buttonStyle">검색</button>
+						<button type="button" class="buttonStyle">추가</button>
+						<button type="button" class="buttonStyle">저장</button>
+						<button type="button" class="buttonStyle">삭제</button>
+					</div>
+				</div>
+				<div>그리드영역</div>
+			</div>
+			<div class="cnt_half_wrap">
+				<div class="cnt cnt_half grid_a">
+					<div class="title">
+						<div class="title-label">그리드타이틀a</div>
+						<div class="title-markuparea">
+							<button type="button" class="buttonStyle">검색</button>
+							<button type="button" class="buttonStyle">추가</button>
+							<button type="button" class="buttonStyle">저장</button>
+							<button type="button" class="buttonStyle">삭제</button>
+						</div>
+					</div>
+					<div>그리드영역</div>
+				</div>
+				<div class="cnt cnt_half grid_b">
+					<div class="title">
+						<div class="title-label">그리드타이틀b</div>
+						<div class="title-markuparea">
+							<button type="button" class="buttonStyle">검색</button>
+							<button type="button" class="buttonStyle">추가</button>
+							<button type="button" class="buttonStyle">저장</button>
+							<button type="button" class="buttonStyle">삭제</button>
+						</div>
+					</div>
+					<div>그리드영역</div>
+				</div>
+			</div>
+		</div> -->
+		<!-- //그리드 3개일(상1,하2) 경우 -->
+
+		<!-- 그리드 상하로 2개일 경우 -->
+		<div class="grid_wrap gridtype1_2">
+			<div class="cnt grid_one">
+				<div class="title">
+					<div class="title-label">그리드타이틀1</div>
+					<div class="title-markuparea">
+						<button type="button" class="buttonStyle">검색</button>
+						<button type="button" class="buttonStyle">추가</button>
+						<button type="button" class="buttonStyle">저장</button>
+						<button type="button" class="buttonStyle">삭제</button>
+					</div>
+				</div>
+				<div>그리드영역</div>
+			</div>
+			<div class="cnt grid_two">
+				<div class="title">
+					<div class="title-label">그리드타이틀1_2</div>
+					<div class="title-markuparea">
+						<button type="button" class="buttonStyle">검색</button>
+						<button type="button" class="buttonStyle">추가</button>
+						<button type="button" class="buttonStyle">저장</button>
+						<button type="button" class="buttonStyle">삭제</button>
+					</div>
+				</div>
+				<div>그리드영역</div>
+			</div>
+		</div>
+		<!-- //그리드 상하로 2개일 경우 -->
+	
+	</div><!-- [end]cnt_wrap -->
+</body>
+
+</html>

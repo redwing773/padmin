@@ -1,0 +1,46 @@
+@charset "utf-8";
+
+html,body,div,p,iframe,frameset, h1,h2,h3,h4,h5,h6, strong,span,b,em,var,label,legend, ul,ol,li,dl,dt,dd,
+table,thead,tbody,tfoot,tr,th,td,caption, form,fieldset,input,textarea, sub,sup,img,a,del,button,pre,
+header,footer,section,article,aside{padding:0;margin:0;border:0;font-size:100%;font:inherit;}
+
+body {color:#222;font-size:13px;line-height:normal;font-family:'Noto Sans KR','맑은 고딕','Malgun Gothic',Apple SD Gothic Neo,AppeGothic,Arial,sans-serif;/* letter-spacing:-1px; */}
+
+/* 한국어 */
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR&subset=korean');
+:lang(ko){font-family:'Noto Sans KR', sans-serif;} 
+/* 영어 */
+@import url(https://fonts.googleapis.com/css?family=Noto+Sans);
+:lang(en){font-family:'Noto Sans', sans-serif;} 
+
+
+/* 태그 리셋 */
+button {background:transparent;cursor:pointer;}
+img {vertical-align:top;}
+img,button,fieldset,table {border:0;}
+em, address, del {font-style:normal;}
+label,a {display:inline-block;}
+strong,b {font-weight:bold;}
+
+/* form */
+input,select,label,button,textarea {border-radius: 0; -webkit-border-radius:0; background-color:transparent;color:#222;font-size:15px;line-height:normal;font-family:'Noto Sans KR','맑은 고딕','Malgun Gothic','돋음',Dotum,Apple SD Gothic Neo,AppeGothic,Arial,sans-serif;vertical-align:middle;-webkit-appearance: none;appearance: none;-moz-appearance: none;}
+select::-ms-expand, label::-ms-expand { display: none; }
+textarea {padding:10px;border:1px solid #d5d5d5;color:#222;background:#fafafa;font-family:'Noto Sans KR','맑은 고딕','Malgun Gothic',Apple SD Gothic Neo,AppeGothic,Arial,sans-serif;}
+textarea:target,
+textarea:focus {border:1px solid #000;}
+select {height:26px;}
+
+/* 목록 스타일 리셋 */
+ul, ol, li {list-style:none;}
+
+/* table */
+table {width:100%;border-collapse:separate;border-spacing:0;}
+th, td {word-break:break-all;word-wrap:break-word;}
+
+/* alink 세팅 */
+a {border:0;color:#222;text-decoration:none;}
+a:hover {text-decoration:none;}
+a.on {height:auto;text-indent:inherit;background-image:none;}
+
+/* 대체텍스트 and 숨김처리 */
+caption, legend, .hidden {position:absolute;top:0;left:0;overflow:hidden;width:0 !important;height:0 !important;font-size:0 !important;line-height:0 !important;}
