@@ -238,6 +238,7 @@ $(function () {
         
         //defalut
         if( $('.tbodywrap').hasClass('close')) tbl.css('height',trH);
+        // 기본열기 open / close
         
         $('#detailsearch').on('click',function(){
             if($('.tbodywrap').hasClass('open')){
@@ -246,7 +247,8 @@ $(function () {
 		        openTable();
 		    }
 		});		
-		function closeTable(){
+        
+        function closeTable(){
             tbl.animate({height:trH},200);
              $('.tbodywrap').removeClass('open').addClass('close');
              //$('.grid_wrap').css('height','100%').css('height','-=99px');
@@ -274,10 +276,15 @@ function _tabClick(_attrID){
     /* 탭 선택 간 nav 메뉴 펼침 상태 변경 */
     var tabCurrentLi = $('.list_menu li a[rel='+ _attrID +']');
     if (!tabCurrentLi.parent().hasClass('on')) {
+        if(!tabCurrentLi.hasClass('selected')){
+            tabCurrentLi.closest('ul').find('.selected').removeClass('selected');
+            tabCurrentLi.addClass('selected');
+        } else {
         $('.list_menu').find('.selected').removeClass('selected');
         $('.list_menu').find('.on').removeClass('on').find('li').removeClass('on').parent('ul').slideUp(300);
         tabCurrentLi.addClass('selected');
         tabCurrentLi.parents('li').addClass('on').children('ul').slideDown(300);
+        }
     }
     
     /* 진행 예정 - 메뉴 펼침 상태 변경 시 메뉴 인덱스 상태에 따른 유동 변경 */
