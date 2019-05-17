@@ -41,7 +41,7 @@ $(function () {
 	});
 	
 	
-	//메뉴드롭다운
+	//메뉴 클릭
     $('.list_menu li:has(ul)').addClass('has_sub');
     $('.list_menu li a').on('click',function(){
         var li = $(this).parent('li');
@@ -63,7 +63,7 @@ $(function () {
     	ul = $('.tab_nav_wrap .list_tab_nav');
     
     $('.list_menu .item').click(function () {
-    	$(this).parent().siblings().find('.selected').removeClass('selected');
+    	$('.list_menu').find('.selected').removeClass('selected');
     	$(this).addClass('selected');
         addTab($(this));
         ulWidth();
@@ -141,9 +141,9 @@ $(function () {
             nextIdx = currentIdx + 1,
             prevTab = $('.tab_nav_wrap li').eq(prevIdx),
             nextTab = $('.tab_nav_wrap li').eq(nextIdx),
-            currentId = currentTab.find('.tab').attr('id') + '_content',
-            prevTabId = prevTab.find('.tab').attr('id') + '_content',
-            nextTabId = nextTab.find('.tab').attr('id') + '_content';
+            currentId = currentTab.find('.tab').attr('id'),
+            prevTabId = prevTab.find('.tab').attr('id'),
+            nextTabId = nextTab.find('.tab').attr('id');
         	ulW = ul.outerWidth();
         if ($(this).hasClass('btn_tab_prev')) {
             //이전 탭
@@ -153,8 +153,9 @@ $(function () {
             }
             currentTab.removeClass('current');
             prevTab.addClass('current');
-            $('#' + currentId).hide();
-            $('#' + prevTabId).show();
+            $('#' + currentId + '_content').hide();
+            $('#' + prevTabId + '_content').show();
+            navSel(prevTabId);
             
             var currentleft = prevTab.position().left,
         		left = tabNavW - currentleft - prevTab.width();
@@ -168,8 +169,9 @@ $(function () {
             }
             currentTab.removeClass('current');
             nextTab.addClass('current');
-            $('#' + currentId).hide();
-            $('#' + nextTabId).show();
+            $('#' + currentId + '_content').hide();
+            $('#' + nextTabId + '_content').show();
+            navSel(nextTabId);
             
             var currentleft = nextTab.position().left,
             	left = tabNavW - currentleft - nextTab.width();
@@ -179,6 +181,9 @@ $(function () {
             //전체닫기
             $('.tab_nav_wrap li').remove();
             $('.cnt_wrap').remove();
+            $('.list_menu').children('li.on').find('ul').slideUp(200);
+            $('.list_menu li.on').removeClass('on');
+            $('.list_menu .selected').removeClass('selected');
             ulWidth();
             
             //default show
@@ -199,15 +204,14 @@ $(function () {
     //날짜선택***********************
     $(function() {
         //모든 datepicker에 대한 공통 옵션 설정
-        $.datepicker.setDefaults({
+    	$.datepicker.setDefaults({
             dateFormat: 'yy-mm-dd' //Input Display Format 변경
             ,showOtherMonths: true //빈 공간에 현재월의 앞뒤월의 날짜를 표시
             ,showMonthAfterYear:true //년도 먼저 나오고, 뒤에 월 표시
             ,changeYear: true //콤보박스에서 년 선택 가능
             ,changeMonth: true //콤보박스에서 월 선택 가능                
-            ,showOn: "both" //button:버튼을 표시하고,버튼을 눌러야만 달력 표시 ^ both:버튼을 표시하고,버튼을 누르거나 input을 클릭하면 달력 표시  
-            ,buttonImage: '../resources/img/dateimg.png' //버튼 이미지 경로
-            ,buttonImageOnly: true //기본 버튼의 회색 부분을 없애고, 이미지만 보이게 함
+            ,showOn: "both" //button:버튼을 표시하고,버튼을 눌러야만 달력 표시 ^ both:버튼을 표시하고,버튼을 누르거나 input을 클릭하면 달력 표시
+            ,buttonImageOnly: false //기본 버튼의 회색 부분을 없애고, 이미지만 보이게 함
             ,buttonText: "선택" //버튼에 마우스 갖다 댔을 때 표시되는 텍스트                
             ,yearSuffix: "년" //달력의 년도 부분 뒤에 붙는 텍스트
             ,monthNamesShort: ['1','2','3','4','5','6','7','8','9','10','11','12'] //달력의 월 부분 텍스트
@@ -219,26 +223,25 @@ $(function () {
         });
 
         //input을 datepicker로 선언
-        $("#datepicker").datepicker();                    
-        $("#datepicker2").datepicker();
+        $(".datepicker").datepicker();                    
+        $(".datepicker2").datepicker();
         
         //From의 초기값을 오늘 날짜로 설정
-        $('#datepicker').datepicker('setDate', 'today'); //(-1D:하루전, -1M:한달전, -1Y:일년전), (+1D:하루후, -1M:한달후, -1Y:일년후)
+        $('.datepicker').datepicker('setDate', 'today'); //(-1D:하루전, -1M:한달전, -1Y:일년전), (+1D:하루후, -1M:한달후, -1Y:일년후)
         //To의 초기값을 내일로 설정
-        $('#datepicker2').datepicker('setDate', '+1D'); //(-1D:하루전, -1M:한달전, -1Y:일년전), (+1D:하루후, -1M:한달후, -1Y:일년후)
+        $('.datepicker2').datepicker('setDate', '+1D'); //(-1D:하루전, -1M:한달전, -1Y:일년전), (+1D:하루후, -1M:한달후, -1Y:일년후)
     });
     
 	    
     
 	//상세검색버튼***********************
     $('#detailsearch').each(function(){
-        var tbl= $('.tbl_frm'),
-            tblH = tbl.outerHeight(),
-            trH = $('.tbl_frm tr').outerHeight();
-        
-        //defalut
+        var tbl= $('.tbl_wrap'),
+            tblH = $('.tbl_wrap').outerHeight(),
+            trH = $('.tbl_frm tr').outerHeight()*2+1;
+
+            //defalut
         if( $('.tbodywrap').hasClass('close')) tbl.css('height',trH);
-        // 기본열기 open / close
         
         $('#detailsearch').on('click',function(){
             if($('.tbodywrap').hasClass('open')){
@@ -251,21 +254,38 @@ $(function () {
         function closeTable(){
             tbl.animate({height:trH},200);
              $('.tbodywrap').removeClass('open').addClass('close');
-             //$('.grid_wrap').css('height','100%').css('height','-=99px');
-             
-		}		
+        }		
 		function openTable(){
             tbl.animate({height:tblH},200);
             $('.tbodywrap').removeClass('close').addClass('open');
-            //$('.grid_wrap').css('height','100%').css('height','-=205px');
-            
         }		
     }); // [end] 상세검색버튼
-});
+
+//팝업화면 열기/닫기버튼***********************
+    /* if( $('.cnt').find('.tbodywrap').hasClass('close')) $('tbl_wrap').css('height',$('.tbl_frm tr').outerHeight()+1); */
+    $('.pop_wrap .btn_acco').on('click',function(){
+        if($(this).closest('.cnt').find('.tbodywrap').hasClass('open')){
+            $(this).closest('.cnt').find('.tbl_wrap').animate({height:$(this).closest('.cnt').find('.tbl_frm tr').outerHeight()+1},200);
+            $(this).closest('.cnt').find('.tbl_wrap').removeClass('open').addClass('close');
+            $(this).closest('.cnt').find('.ico_btn_acco').css('background-position','-278px 3px');
+        } else{
+            console.log(1);
+            $(this).closest('.cnt').find('.tbl_wrap').animate({height:0},200);
+            $(this).closest('.cnt').find('.tbl_wrap').removeClass('close').addClass('open');
+            $(this).closest('.cnt').find('.ico_btn_acco').css('background-position','-248px 3px');
+        } return;
+
+    });
+// [end] 팝업화면 열기/닫기 버튼
+
+
+
+});//[end] $function
 
 
 function _tabClick(_attrID){
-    var contentname = _attrID + '_content';
+    var contentname = _attrID + '_content',
+    	id = _attrID;
 
     $('#content .cnt_wrap').hide();
     $('.tab_nav_wrap li').removeClass('current');
@@ -273,29 +293,56 @@ function _tabClick(_attrID){
     $('#' + contentname).show();
     $('#' + _attrID).parent().addClass('current');
     
-    /* 탭 선택 간 nav 메뉴 펼침 상태 변경 */
-    var tabCurrentLi = $('.list_menu li a[rel='+ _attrID +']');
-    if (!tabCurrentLi.parent().hasClass('on')) {
-        if(!tabCurrentLi.hasClass('selected')){
-            tabCurrentLi.closest('ul').find('.selected').removeClass('selected');
-            tabCurrentLi.addClass('selected');
-        } else {
-        $('.list_menu').find('.selected').removeClass('selected');
-        $('.list_menu').find('.on').removeClass('on').find('li').removeClass('on').parent('ul').slideUp(300);
-        tabCurrentLi.addClass('selected');
-        tabCurrentLi.parents('li').addClass('on').children('ul').slideDown(300);
-        }
+    navSel(id);
+} /* function _tabclick end */
+
+/* 탭 선택 간 nav 메뉴 펼침 상태 변경 */
+function navSel(_attrID){
+    var selNav = $('.list_menu li a[rel='+ _attrID +']'),
+    	seldepth2 = selNav.closest('ul').parent('li'),
+		seldepth1 = selNav.closest('ul').parents('li').parents('li'),
+		prevdepth1 = $('.list_menu').children('li.on'),
+    	prevdepth2 = $('.list_menu .selected').closest('ul').parent('li');
+    
+    //2depth메뉴의 링크일 경우 index 재설정
+    if( selNav.closest('ul').hasClass('list_menu_2dep') ){
+    	seldepth2 = selNav.parent('li');
+    	seldepth1 = selNav.closest('ul').parent('li');
+    };
+    
+    if ( seldepth1.index() == prevdepth1.index() && seldepth2.index() != prevdepth2.index() ) {
+    	//같은 1depth 메뉴일 경우
+    	if ( selNav.closest('ul').hasClass('list_menu_2dep') ) {
+    		//2depth 메뉴 링크 선택시
+    		selNav.parent('li').siblings().find('ul').slideUp(200);
+    	}else if( $('.list_menu a.selected').closest('ul').hasClass('list_menu_2dep') ){
+    		//이전 선택된 메뉴가 2depth일 경우
+    		selNav.closest('ul').slideDown(200);
+    	}else{
+    		if( selNav.closest('ul').parent().siblings().hasClass('on') && selNav.closest('ul').parent().siblings('li.on').find('.selected').length == 0 ){
+    			//nav에서 다른 depth펼친후 탭선택한 경우
+    			selNav.closest('ul').slideDown(200);
+    			selNav.closest('ul').parent().siblings('li.on').find('ul:visible').slideUp(200);
+    		}
+        	$('.list_menu a.selected').closest('ul').slideUp(200);
+        	selNav.closest('ul').slideDown(200);
+    	}
+    }else if ( seldepth1.index() != prevdepth1.index() ) {
+    	//다른 1depth 메뉴일 경우
+    	$('.list_menu').children('li.on').find('ul').slideUp(200);
+    	selNav.closest('ul').css('display','block').parent().parent('ul').slideDown(200);
     }
     
-    /* 진행 예정 - 메뉴 펼침 상태 변경 시 메뉴 인덱스 상태에 따른 유동 변경 */
-    
-    /* 진행 중 - URL로 접근 시 nav 메뉴 on, selected, 슬라이드 다운 추가 */
-    $(document).ready(function () {
-    if($('.list_menu').find('on').length>0) {
-        console.log("읍으야?");
-        tabCurrentLi.addClass('selected');
-        tabCurrentLi.parents('li').addClass('on').children('ul').slideDown(300);
-        }
-    });
-    
-} /* function _tabclick end */
+    $('.list_menu').find('.on').removeClass('on');
+    selNav.parents('li').addClass('on');
+    $('.list_menu').find('.selected').removeClass('selected');
+	selNav.addClass('selected');
+}
+
+//윈도우팝업
+function openPopup(URL,specs){
+    window.open(URL,name,specs);
+
+}
+
+

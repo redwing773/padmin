@@ -1,25 +1,24 @@
 <!DOCTYPE html>
 <html>
-
 <head>
 	<meta charset="UTF-8">
 	<title>cnt_wrap</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<link rel="stylesheet" href="../resources/css/jquery-ui.css">
 	<link rel="stylesheet" href="../resources/css/reset.css">
 	<link rel="stylesheet" href="../resources/css/layout.css">
 	<link rel="stylesheet" href="../resources/css/common.css">
-	<link rel="stylesheet" href="../resources/css/jquery-ui.css">
 	<script src="../resources/js/jquery-1.12.4.min.js"></script>
 	<script src="../resources/js/jquery-ui.min.js"></script>
 	<script src="../resources/js/admin.js"></script>
 </head>
 
 <body>
-
 	<div id="" class="cnt_wrap">
 		<div class="cnt">
 			<div class="title">
-				<div class="title-label">공통코드관리</div>
+				<div class="title-label">Cnt Title</div>
 				<div class="title-markuparea">
 					<button type="button" class="buttonStyle">검색</button>
 					<button type="button" class="buttonStyle">추가</button>
@@ -34,14 +33,40 @@
 						<col span="12" style="width:8.3%" />
 					</colgroup>
 					<tbody class="tbodywrap close">
-						<!-- 상세검색이 있는 기본 행 -->
-						<tr class="col1">
-							<th scope="row">제품명</th>
+						<!-- 2019.05.15 구조수정 상세검색이 없는 1열 구성 행-->
+						<!-- <tr class="col1">
+							<th scope="row">상세검색 없는경우</th>
 							<td>
-								<input type="text" class="inp_txt" placeholder="제품번호를 입력하세요">
+								<input type="text" class="inp_txt" placeholder="placeholder">
 							</td>
+						</tr> -->
+						<!-- //2019.05.15 구조수정 상세검색이 없는 1열 구성 행 -->
+						
+						<!-- 2019.05.15 구조수정 상세검색이 있는 1열 구성 행-->
+						<!-- <tr class="col1">
+							<th scope="row">상세검색 col1</th>
+							<td class="hasbtn">
+								<input type="text" class="inp_txt" placeholder="placeholder">
+								<div class="btn_area">
+									<button type="button" id="detailsearch" class="btn_detail">
+										<span class="btn_detail_text">상세검색</span>
+										<span class="ico_btn_detail"></span>
+									</button>
+								</div>
+							</td>
+						</tr> -->
+						<!-- //2019.05.15 구조수정 상세검색이 있는 1열 구성 행 -->
+						
+						<!-- 2019.05.15 구조수정 상세검색이 있는 2열 구성 행 -->
+						<tr class="col2">
+							<th scope="row">상세검색 있는col2</th>
 							<td>
-								<div class="btn_area fr">
+								<input type="text" class="inp_txt" placeholder="placeholder">
+							</td>
+							<th scope="row">th</th>
+							<td class="hasbtn">
+								<input type="text" class="inp_txt" placeholder="placeholder">
+								<div class="btn_area">
 									<button type="button" id="detailsearch" class="btn_detail">
 										<span class="btn_detail_text">상세검색</span>
 										<span class="ico_btn_detail"></span>
@@ -49,20 +74,19 @@
 								</div>
 							</td>
 						</tr>
-						<!-- //상세검색이 있는 기본 행 -->
+						<!-- //2019.05.15 구조수정 상세검색이 있는 2열 구성 행 -->
 						
 						<!-- 2열 구성 행 -->
 						<tr class="col2">
-							<th scope="row">대상구분</th>
+							<th scope="row">select</th>
 							<td>
 								<select class="sel">
 									<option value="전체" selected="selected">전체</option>
 									<option>1</option>
 									<option>2</option>
 								</select>
-								<span class="selected ico_selected"></span>
 							</td>
-							<th scope="row">경매이력</th>
+							<th scope="row">search</th>
 							<td>
 								<div class="inp_wrap type_search">
 									<input type="text" class="inp_txt" placeholder="검색어를 입력하세요">
@@ -74,7 +98,7 @@
 
 						<!-- 3열 구성 행 -->
 						<tr class="col3">
-							<th scope="row">두께(mm)</th>
+							<th scope="row">col1</th>
 							<td>
 								<div class="inp_wrap type_col">
 									<input type="text" class="inp_txt ta_r" value="0">
@@ -82,7 +106,7 @@
 									<input type="text" class="inp_txt ta_r" value="0">
 								</div>
 							</td>
-							<th scope="row">폭(mm)</th>
+							<th scope="row">col2</th>
 							<td>
 								<div class="inp_wrap type_col">
 									<input type="text" class="inp_txt ta_r" value="0">
@@ -90,7 +114,7 @@
 									<input type="text" class="inp_txt ta_r" value="0">
 								</div>
 							</td>
-							<th scope="row">중량(kg)</th>
+							<th scope="row">col3</th>
 							<td>
 								<div class="inp_wrap type_col">
 									<input type="text" class="inp_txt ta_r" value="0"> <span>~</span>
@@ -99,27 +123,131 @@
 							</td>
 						</tr>
 						<!-- //3열 구성 행 -->
+						
+						<!-- 4열 구성 행 -->
+						<!-- <tr class="col4">
+							<th scope="row">col1</th>
+							<td>
+								<input type="text" class="inp_txt" placeholder="placeholder">
+							</td>
+							<th scope="row">col2</th>
+							<td>
+								<input type="text" class="inp_txt" placeholder="placeholder">
+							</td>
+							<th scope="row">col3</th>
+							<td>
+								<input type="text" class="inp_txt" placeholder="placeholder">
+							</td>
+							<th scope="row">col4</th>
+							<td>
+								<input type="text" class="inp_txt" placeholder="placeholder">
+							</td>
+						</tr> -->
+						<!-- //4열 구성 행 -->
 
-						<!-- 2열 구성 행 -->
-						<tr class="col2">
-							<th scope="row">입고일</th>
+						<!-- datepicker -->
+						<tr class="col1">
+							<th scope="row">datepicker</th>
 							<td>
 								<div class="inp_wrap type_col">
 									<div class="inp_area">
 										<label for="form" class="hidden">시작일</label>
-										<input type="text" id="datepicker" name="from" class="inp_cal">
+										<input type="text" id="" name="from" class="inp_cal datepicker">
 									</div>
 									<span>~</span>
 									<div class="inp_area">
 										<label for="to" class="hidden">종료일</label>
-										<input type="text" id="datepicker2" name="to" class="inp_cal">
+										<input type="text" id="" name="to" class="inp_cal datepicker2">
 									</div>
 								</div>
 							</td>
-							<th scope="row">판매입고일</th>
-							<td></td>
 						</tr>
-						<!-- //2열 구성 행 -->
+						<!-- //datepicker -->
+						
+						<!-- checkbox -->
+						<tr class="col1">
+							<th scope="row">checkbox</th>
+							<td>
+								<div class="chk_area">
+									<span class="chk">
+										<input type="checkbox" id="chk01_1" name="chk01">
+										<label for="chk01_1">default</label>
+									</span>
+									<span class="chk">
+										<input type="checkbox" id="chk01_2" name="chk01" checked="checked">
+										<label for="chk01_2">checked</label>
+									</span>
+									<span class="chk">
+										<input type="checkbox" id="chk01_3" name="chk01" disabled="disabled">
+										<label for="chk01_3">diabled</label>
+									</span>
+									<span class="chk">
+										<input type="checkbox" id="chk01_4" name="chk01" checked="checked" disabled="disabled">
+										<label for="chk01_4">checked disabled</label>
+									</span>
+								</div>
+							</td>
+						</tr>
+						<!-- //checkbox -->
+						
+						<!-- radio -->
+						<tr class="col1">
+							<th scope="row">radio</th>
+							<td>
+								<div class="chk_area">
+									<span class="rdo">
+										<input type="radio" id="rdo01_1" name="rdo01">
+										<label for="rdo01_1">default</label>
+									</span>
+									<span class="rdo">
+										<input type="radio" id="rdo01_2" name="rdo01" checked="checked">
+										<label for="rdo01_2">checked</label>
+									</span>
+									<span class="rdo">
+										<input type="radio" id="rdo02_1" name="rdo02" disabled="disabled" class="disabled">
+										<label for="rdo02_1">diabled</label>
+									</span>
+									<span class="rdo">
+										<input type="radio" id="rdo02_2" name="rdo02" checked="checked" disabled="disabled">
+										<label for="rdo02_2">checked disabled</label>
+									</span>
+								</div>
+							</td>
+						</tr>
+						<!-- //radio -->
+						
+						<!-- textarea -->
+						<tr class="col1">
+							<th scope="row">textarea</th>
+							<td>
+								<textarea name="" id="" rows="3" cols="50" placeholder="placeholder"></textarea>
+							</td>
+						</tr>
+						<!-- //textarea -->
+						
+						<!-- upload file -->
+						<tr class="col1">
+							<th scope="row">file</th>
+							<td>
+								<div class="file_wrap">
+									<input type="file" id="file" name="file" class="hidden" multiple>
+									<label for="file">찾아보기</label>
+									<div class="file_box">
+										<div class="file_info clearfix">
+											<span class="file_count">첨부파일 <em>0</em>개</span>
+											<button class="btn_download">다운로드</button>
+										</div>
+										<div class="upload_name">
+											<ul class="list_file list_dot">
+												<li>파일명<button class="btn_delete ico_delete">첨부파일삭제</button></li>
+												<li>파일명<button class="btn_delete ico_delete">첨부파일삭제</button></li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</td>
+						</tr>
+						<!-- //upload file -->
 					</tbody>
 				</table>
 			</div>

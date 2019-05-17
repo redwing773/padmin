@@ -4,7 +4,7 @@ html,body,div,p,iframe,frameset, h1,h2,h3,h4,h5,h6, strong,span,b,em,var,label,l
 table,thead,tbody,tfoot,tr,th,td,caption, form,fieldset,input,textarea, sub,sup,img,a,del,button,pre,
 header,footer,section,article,aside{padding:0;margin:0;border:0;font-size:100%;font:inherit;}
 
-body {color:#222;font-size:13px;line-height:normal;font-family:'Noto Sans KR','맑은 고딕','Malgun Gothic',Apple SD Gothic Neo,AppeGothic,Arial,sans-serif;/* letter-spacing:-1px; */}
+body {color:#333;font-size:13px;line-height:normal;font-family:'Noto Sans KR','맑은 고딕','Malgun Gothic',Apple SD Gothic Neo,AppeGothic,Arial,sans-serif;line-height:1.5;/* letter-spacing:-1px; */}
 
 /* 한국어 */
 @import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR&subset=korean');
@@ -23,12 +23,10 @@ label,a {display:inline-block;}
 strong,b {font-weight:bold;}
 
 /* form */
-input,select,label,button,textarea {border-radius: 0; -webkit-border-radius:0; background-color:transparent;color:#222;font-size:15px;line-height:normal;font-family:'Noto Sans KR','맑은 고딕','Malgun Gothic','돋음',Dotum,Apple SD Gothic Neo,AppeGothic,Arial,sans-serif;vertical-align:middle;-webkit-appearance: none;appearance: none;-moz-appearance: none;}
-select::-ms-expand, label::-ms-expand { display: none; }
-textarea {padding:10px;border:1px solid #d5d5d5;color:#222;background:#fafafa;font-family:'Noto Sans KR','맑은 고딕','Malgun Gothic',Apple SD Gothic Neo,AppeGothic,Arial,sans-serif;}
-textarea:target,
-textarea:focus {border:1px solid #000;}
-select {height:26px;}
+input,select,label,button,textarea {border-radius: 0; -webkit-border-radius:0; background-color:transparent;color:#333;font-size:13px;line-height:normal;font-family:'Noto Sans KR','맑은 고딕','Malgun Gothic','돋음',Dotum,Apple SD Gothic Neo,AppeGothic,Arial,sans-serif;vertical-align:middle;-webkit-appearance: none;appearance: none;-moz-appearance: none;}
+textarea{padding:12px;width:100%;min-height:116px;border:1px solid #d2d2d2;box-sizing:border-box;resize:none;}
+select::-ms-expand, label::-ms-expand,input[type="checkbox"]::-ms-check, input[type="radio"]::-ms-check {display: none;}
+select {height:26px;font-size:13px;}
 
 /* 목록 스타일 리셋 */
 ul, ol, li {list-style:none;}

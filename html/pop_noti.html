@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>철강 e-Marketplace 관리 System</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="stylesheet" href="../resources/css/jquery-ui.css">
+    <link rel="stylesheet" href="../resources/css/reset.css">
+    <link rel="stylesheet" href="../resources/css/layout.css">
+    <link rel="stylesheet" href="../resources/css/common.css">
+    <script src="../resources/js/jquery-1.12.4.min.js"></script>
+    <script src="../resources/js/jquery-ui.min.js"></script>
+    <script src="../resources/js/admin.js"></script>
+</head>
+
+<body>
+    <div class="pop_wrap">
+        <div class="pop_header clearfix">
+            <h1 class="pop_tit fl">공지사항 수정</h1>
+            <button class="btn_popclose ico_btn_popclose fr" title="팝업창 닫기"></button>
+        </div>
+        <div class="pop_container">
+            <div class="cnt_wrap">
+                <div class="cnt">
+                    <div class="tbl_wrap">
+                        <table class="tbl tbl_frm">
+                            <caption></caption>
+                            <colgroup>
+                                <col span="12" style="width:8.3%" />
+                            </colgroup>
+                            <tbody>
+                                <tr class="col1">
+                                    <th scope="row">제목</th>
+                                    <td>
+                                        <input type="text" class="inp_txt" placeholder="오늘의 공지사항 입니다.">
+                                    </td>
+                                </tr>
+                                <tr class="col1">
+                                    <th scope="row" style="text-align:center;border-right:0;">내용</th>
+                                </tr>
+                                <tr class="col1">
+                                    <td>
+                                        <textarea name="" id="" rows="3" cols="50" placeholder="내용을 입력하세요"></textarea>
+                                    </td>
+                                </tr>
+                                <tr class="col1">
+                                    <th scope="row">게시기간</th>
+                                    <td>
+                                        <div class="inp_wrap type_col">
+                                            <div class="inp_area">
+                                                <label for="form" class="hidden">시작일</label>
+                                                <input type="text" id="" name="from" class="inp_cal datepicker">
+                                            </div>
+                                            <span>~</span>
+                                            <div class="inp_area">
+                                                <label for="to" class="hidden">종료일</label>
+                                                <input type="text" id="" name="to" class="inp_cal datepicker2">
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="col1">
+                                    <th scope="row">첨부파일</th>
+                                    <td>
+                                        <div class="file_wrap">
+                                            <input type="file" id="file" name="file" class="hidden" multiple>
+                                            <label for="file">찾아보기</label>
+                                            <div class="file_box">
+                                                <div class="file_info clearfix">
+                                                    <span class="file_count">첨부파일 <em>0</em>개</span>
+                                                    <button class="btn_download">다운로드</button>
+                                                </div>
+                                                <div class="upload_name">
+                                                    <ul class="list_file list_dot">
+                                                        <li>파일명<button class="btn_delete ico_delete">첨부파일삭제</button>
+                                                        </li>
+                                                        <li>파일명<button class="btn_delete ico_delete">첨부파일삭제</button>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="btn_area">
+                        <button type="button" class="buttonStyle">수정</button>
+                        <button type="button" class="buttonStyle">닫기</button>                            
+                    </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

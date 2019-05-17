@@ -44,6 +44,7 @@ div{box-sizing:border-box;}
 #nav .list_menu > li.on > a{color:#f78f31;}
 #nav .list_menu > li.on > a:before{background-color:#f78f31;}
 #nav .list_menu_2dep li {padding-left:5px;}
+#nav .list_menu_2dep > li.on > a{background-color:#efefef;}
 #nav .list_menu li.has_sub > a:after{display:block;content:'';position:absolute;right:20px;top:50%;width:24px;height:24px;transform:translateY(-50%);background:url("../img/icons.png") no-repeat -278px 3px;}
 #nav .list_menu li.has_sub.on > a:after{background:url("../img/icons.png") no-repeat -248px 3px;}
 
@@ -54,7 +55,7 @@ div{box-sizing:border-box;}
 #content > .cnt_wrap{-ms-overflow-style:none;}
 .cnt {padding:15px;margin:15px;background-color:#fff;border:1px solid #c3c9d1;box-shadow:0px 3px 16px rgba(0, 0, 0, 0.1);}
 
-.grid_wrap{/* height: 100%; *//* border:1px solid red; */}
+/* .grid_wrap{height: 100%;border:1px solid red;} */
 
 /* gridtype1 */
 .grid_wrap.gridtype1 .cnt_half_wrap,.grid_wrap.gridtype1 .cnt.grid_two{display:none;}
@@ -76,7 +77,7 @@ div{box-sizing:border-box;}
 /* gridtype1_2 */
 .grid_wrap.gridtype1_2 .cnt_half_wrap {display:none;}
 .grid_wrap.gridtype1_2 .cnt.grid_one{margin-top:0;}
-.grid_wrap.gridtype1_2 .cnt.grid_one,.grid_wrap.gridtype1_2 .cnt.grid_two{/* height:calc(50% - 15px); */}
+/* .grid_wrap.gridtype1_2 .cnt.grid_one,.grid_wrap.gridtype1_2 .cnt.grid_two{height:calc(50% - 15px);} */
 
 .tab_nav_wrap{overflow:hidden;padding-left:20px;width:100%;height:40px;background-color:#f9f9f9;z-index:1;}
 .tab_nav_inner{display:inline-block;overflow-x:auto;overflow:none;position:relative;padding-right:110px;width:100%;height:60px;background-color:#f9f9f9;}
@@ -91,6 +92,7 @@ div{box-sizing:border-box;}
 .tab_nav_wrap li.current .tab{width:100%;font-weight:bold;box-sizing:border-box;}
 .tab_nav_wrap li + li.current{margin-left:-1px;border-left:1px solid #b2b2b2;}
 .tab_nav_wrap .btn_tabclose.ico_tabclose{display:inline-block;position:absolute;top:10px;right:15px;width:20px;height:20px;text-indent:-9999px;line-height:39px;vertical-align:middle;cursor:pointer;background-position:-0px -10px;overflow: hidden;}
+.tab_nav_wrap .btn_tabclose:hover{background-color:#d0d3d6;border-radius:100%;}
 .btn_tab_ctrl{position:absolute;top:-1px;right:0;border-bottom:1px solid #b2b2b2;font-size:0;z-index:3;}
 .btn_tab_ctrl button{width:100%;height:39px;border-left:1px solid #b2b2b2;background-color:#f9f9f9;color:#454545;cursor:pointer;}
 .btn_tab_ctrl button:hover{background-color:#efefef;}

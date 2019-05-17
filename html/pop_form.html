@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>데이터설정 폼테이블 요소 예시</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="stylesheet" href="../resources/css/jquery-ui.css">
+    <link rel="stylesheet" href="../resources/css/reset.css">
+    <link rel="stylesheet" href="../resources/css/layout.css">
+    <link rel="stylesheet" href="../resources/css/common.css">
+    <script src="../resources/js/jquery-1.12.4.min.js"></script>
+    <script src="../resources/js/jquery-ui.min.js"></script>
+    <script src="../resources/js/admin.js"></script>
+</head>
+
+<body>
+<div class="pop_wrap">
+        <div class="pop_header clearfix">
+            <h1 class="pop_tit fl">상세 기준 설정</h1>
+        </div>
+        <div class="pop_container">
+            <div class="cnt_wrap">
+                <div class="cnt">
+                    <div class="tbl_wrap">
+                        <table class="tbl tbl_frm">
+                            <caption></caption>
+                            <colgroup>
+                                <col span="12" style="width:8.3%" />
+                            </colgroup>
+                            <tbody>
+                                <tr class="col1">
+                                    <th scope="row">제품명</th>
+                                    <td>
+                                        <select class="sel">
+											<option value="전체" selected="selected">전체</option>
+											<option>1</option>
+											<option>2</option>
+										</select>
+                                    </td>
+                                </tr>
+                                <tr class="col1">
+                                    <th scope="row">경매일정</th>
+                                    <td>
+                                    	<div class="form_multi">
+                                    		<div class="multi_row">
+                                    			<span class="multi_label">시작일시</span>
+                                    			<div class="inp_wrap type_col">
+													<div class="inp_area">
+														<label for="from" class="hidden">시작일</label>
+														<input type="text" id="" name="from" class="inp_cal datepicker">
+													</div>
+													<span>~</span>
+													<div class="inp_area">
+														<label for="to" class="hidden">종료일</label>
+														<input type="text" id="" name="to" class="inp_cal datepicker2">
+													</div>
+												</div>
+                                   			</div>
+                                   			<div class="multi_row">
+                                   				<span class="multi_label">오전</span>
+                               					<div class="inp_wrap type_col inp_time">
+													<div class="inp_area clearfix">
+														<label for="from" class="hidden">시작</label>
+														<input type="tel" id="" name="from" class="inp_txt">
+														<span>:</span>
+														<select class="sel">
+															<option value="00" selected="selected">00</option>
+															<option>1</option>
+															<option>2</option>
+														</select>
+													</div>
+													<span>~</span>
+													<div class="inp_area clearfix">
+														<label for="from" class="hidden">종료</label>
+														<input type="tel" id="" name="from" class="inp_txt">
+														<span>:</span>
+														<select class="sel">
+															<option value="00" selected="selected">00</option>
+															<option>1</option>
+															<option>2</option>
+														</select>
+													</div>
+												</div>
+                                   			</div>
+                                   			<div class="multi_row">
+                                   				<span class="multi_label">오후</span>
+                                   				<div class="inp_wrap type_col inp_time">
+													<div class="inp_area clearfix">
+														<label for="from" class="hidden">시작</label>
+														<input type="tel" id="" name="from" class="inp_txt">
+														<span>:</span>
+														<select class="sel">
+															<option value="00" selected="selected">00</option>
+															<option>1</option>
+															<option>2</option>
+														</select>
+													</div>
+													<span>~</span>
+													<div class="inp_area clearfix">
+														<label for="from" class="hidden">종료</label>
+														<input type="tel" id="" name="from" class="inp_txt">
+														<span>:</span>
+														<select class="sel">
+															<option value="00" selected="selected">00</option>
+															<option>1</option>
+															<option>2</option>
+														</select>
+													</div>
+												</div>
+                                   			</div>
+                                    	</div>
+                                    </td>
+                                </tr>
+                                <tr class="col1">
+                                    <th scope="row">요일</th>
+                                    <td>
+                                        <div class="chk_area">
+											<span class="chk">
+												<input type="checkbox" id="chk01_1" name="chk01">
+												<label for="chk01_1">전체</label>
+											</span>
+											<span class="chk">
+												<input type="checkbox" id="chk01_2" name="chk01">
+												<label for="chk01_2">월</label>
+											</span>
+											<span class="chk">
+												<input type="checkbox" id="chk01_3" name="chk01">
+												<label for="chk01_3">화</label>
+											</span>
+											<span class="chk">
+												<input type="checkbox" id="chk01_4" name="chk01">
+												<label for="chk01_4">수</label>
+											</span>
+											<span class="chk">
+												<input type="checkbox" id="chk01_4" name="chk01">
+												<label for="chk01_4">목</label>
+											</span>
+											<span class="chk">
+												<input type="checkbox" id="chk01_4" name="chk01">
+												<label for="chk01_4">금</label>
+											</span>
+										</div>
+                                    </td>
+                                </tr>
+                                <tr class="col1">
+                                    <th scope="row">경매방식</th>
+                                    <td>
+                                        <div class="chk_area">
+											<span class="rdo">
+												<input type="radio" id="rdo01_1" name="rdo01"  checked="checked">
+												<label for="rdo01_1">일괄구매</label>
+											</span>
+											<span class="rdo">
+												<input type="radio" id="rdo01_2" name="rdo01">
+												<label for="rdo01_2">최소낙찰량</label>
+											</span>
+											<span class="rdo">
+												<input type="radio" id="rdo01_3" name="rdo01">
+												<label for="rdo01_3">물량확인</label>
+											</span>
+										</div>
+                                    </td>
+                                </tr>
+                                <tr class="col1">
+                                    <th scope="row">입찰방식</th>
+                                    <td>
+                                        <div class="chk_area">
+											<span class="rdo">
+												<input type="radio" id="rdo02_1" name="rdo02"  checked="checked">
+												<label for="rdo02_1">Open경매</label>
+											</span>
+											<span class="rdo">
+												<input type="radio" id="rdo02_2" name="rdo02">
+												<label for="rdo02_2">Blind경매</label>
+											</span>
+										</div>
+                                    </td>
+                                </tr>
+                                <tr class="col1">
+                                    <th scope="row" rowspan="3">구매기준</th>
+                                    <td>
+                                    	<div class="form_multi">
+                                    		<div class="multi_row">
+                                    			<span class="multi_label">경매대상량</span>
+                                    			<div class="inp_wrap type_unit">
+	                                    			<input type="tel" id="form_multi01" class="inp_txt inp_unit" placeholder="0">
+	                                    			<span>kg</span>
+                                    			</div>
+                                   			</div>
+                                   			<div class="multi_row">
+                                   				<span class="multi_label">경매대상량</span>
+                                   				<div class="inp_wrap type_unit">
+	                                    			<input type="tel" id="form_multi01" class="inp_txt inp_unit" placeholder="0">
+	                                    			<span>kg, 낙찰가적용</span>
+                                    			</div>
+                                   			</div>
+                                   			<div class="multi_row">
+                                   				<span class="multi_label">시작가격</span>
+                                   				<div class="inp_wrap type_unit">
+	                                    			<input type="tel" id="form_multi03" class="inp_txt inp_unit" placeholder="0">
+	                                    			<span>원</span>
+												</div>
+                                   			</div>
+                                    	</div>
+                                    </td>
+                                </tr>
+                                <tr class="col1">
+                                    <th scope="row">자동편성여부</th>
+                                    <td>
+                                    	<div class="chk_area">
+											<span class="rdo">
+												<input type="radio" id="rdo03_1" name="rdo03"  checked="checked">
+												<label for="rdo03_1">자동편성 함</label>
+											</span>
+											<span class="rdo">
+												<input type="radio" id="rdo03_2" name="rdo03">
+												<label for="rdo03_2">자동편성 안함</label>
+											</span>
+										</div>
+                                    </td>
+                                </tr>
+                                <tr class="col1">
+                                    <th scope="row">자동편성기준</th>
+                                    <td>
+                                    	<div class="form_multi">
+                                    		<div class="multi_row">
+                                    			<span class="multi_label">자동편성중량</span>
+                                    			<div class="inp_wrap type_unit">
+	                                    			<input type="tel" id="form_multi01" class="inp_txt inp_unit" placeholder="0">
+	                                    			<span>kg</span>
+                                    			</div>
+                                   			</div>
+                                   			<div class="multi_row">
+                                   				<span class="multi_label">Outlet유찰</span>
+                                    			<div class="inp_wrap type_unit">
+	                                    			<input type="tel" id="form_multi01" class="inp_txt inp_unit" placeholder="0">
+	                                    			<span>회 이상</span>
+                                    			</div>
+                                   			</div>
+                                    	</div>
+                                    </td>
+                                </tr>
+                                <tr class="col1">
+                                    <th scope="row">비고</th>
+                                    <td>
+                                        <textarea name="" id="" rows="3" cols="50" placeholder="placeholder"></textarea>
+                                    </td>
+                                </tr>
+                                <tr class="col1">
+                                    <th scope="row">첨부파일</th>
+                                    <td>
+                                        <div class="file_wrap">
+											<input type="file" id="file" name="file" class="hidden" multiple>
+											<label for="file">찾아보기</label>
+											<div class="file_box">
+												<div class="file_info clearfix">
+													<span class="file_count">첨부파일 <em>0</em>개</span>
+													<button class="btn_download">다운로드</button>
+												</div>
+												<div class="upload_name">
+													<ul class="list_file list_dot">
+														<li>파일명<button class="btn_delete ico_delete">첨부파일삭제</button></li>
+														<li>파일명<button class="btn_delete ico_delete">첨부파일삭제</button></li>
+													</ul>
+												</div>
+											</div>
+										</div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="btn_area">
+                    	<button type="button" class="buttonStyle">취소</button>
+                    	<button type="button" class="buttonStyle">저장</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

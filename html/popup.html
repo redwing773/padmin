@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>popup</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="stylesheet" href="../resources/css/jquery-ui.css">
+    <link rel="stylesheet" href="../resources/css/reset.css">
+    <link rel="stylesheet" href="../resources/css/layout.css">
+    <link rel="stylesheet" href="../resources/css/common.css">
+    <script src="../resources/js/jquery-1.12.4.min.js"></script>
+    <script src="../resources/js/jquery-ui.min.js"></script>
+    <script src="../resources/js/admin.js"></script>
+
+<style>
+/*확인용 스타일 (실제적용X)*/
+.pop_guide{width:960px;margin:40px auto;}
+.btn_pop{border:1px solid #000;padding:6px 12px;}
+h3{font-size:18px;font-weight:bold;margin-top:20px;}
+p{font-size:16px;}
+</style>
+</head>
+
+<body>
+    <div id="wrap">
+        <div id="container">
+            <div class="pop_guide">
+                <h3>데이터설정 폼테이블 요소 예시</h3>
+                <button type="button" id="" class="btn_pop" onclick="openPopup('pop_form.html','width=600,height=800,left=100,top=90');">type_form</button>
+
+                <h3>그리드 포함 팝업 예</h3>
+                <button type="button" id="" class="btn_pop" onclick="openPopup('pop_grid.html','width=600,height=800,left=100,top=90');">type_grid</button>
+                
+                <h3>폼 그룹 아코디언</h3>
+                <button type="button" id="" class="btn_pop" onclick="openPopup('pop_acco.html','width=600,height=800,left=100,top=90');">type_acco</button>
+
+                <h3>FAQ</h3>
+                <button type="button" id="" class="btn_pop" onclick="openPopup('pop_faq.html','width=600,height=800,left=100,top=90');">FAQ</button>
+
+                <h3>공지사항 등록</h3>
+                <button type="button" id="" class="btn_pop" onclick="openPopup('pop_noti.html','width=600,height=800,left=100,top=90');">notice</button>
+
+                <h3>Q&amp;A</h3>
+                <a href="#none" id="" class="btn_pop" onclick="openPopup('pop_qa.html','width=600,height=800,left=100,top=90');">Q&amp;A</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

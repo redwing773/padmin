@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>철강 e-Marketplace 관리 System</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="stylesheet" href="../resources/css/jquery-ui.css">
+    <link rel="stylesheet" href="../resources/css/reset.css">
+    <link rel="stylesheet" href="../resources/css/layout.css">
+    <link rel="stylesheet" href="../resources/css/common.css">
+    <script src="../resources/js/jquery-1.12.4.min.js"></script>
+    <script src="../resources/js/jquery-ui.min.js"></script>
+    <script src="../resources/js/admin.js"></script>
+</head>
+
+<body>
+    <div class="pop_wrap">
+        <div class="pop_header clearfix">
+            <h1 class="pop_tit fl">FAQ 등록</h1>
+            <button class="btn_popclose ico_btn_popclose fr" title="팝업창 닫기"></button>
+        </div>
+        <div class="pop_container">
+            <div class="cnt_wrap">
+                <div class="cnt">
+                    <div class="tbl_wrap">
+                        <table class="tbl tbl_frm">
+                            <caption></caption>
+                            <colgroup>
+                                <col span="12" style="width:8.3%" />
+                            </colgroup>
+                            <tbody class="tbodywrap open">
+                                <tr class="col1">
+                                    <th scope="row">제목</th>
+                                    <td>
+                                        <input type="text" class="inp_txt" placeholder="제목">
+                                    </td>
+                                </tr>
+
+                                <tr class="col1">
+                                    <th scope="row" style="width:16.6%;">분류</th>
+                                    <td>
+                                        <select class="sel">
+                                            <option value="전체" selected="selected">재고</option>
+                                            <option>주문</option>
+                                            <option>출하</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr class="col1">
+                                    <th scope="row" style="text-align:center;border-right:0;">내용</th>
+                                </tr>
+                                <tr class="col1">
+                                    <td>
+                                        <textarea name="" id="" rows="3" cols="50" placeholder="내용을 입력하세요"></textarea>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="btn_area">
+                        <button type="button" class="buttonStyle">등록</button>
+                        <button type="button" class="buttonStyle">닫기</button>                            
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
