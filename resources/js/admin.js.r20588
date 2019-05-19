@@ -260,27 +260,7 @@ $(function () {
             $('.tbodywrap').removeClass('close').addClass('open');
         }		
     }); // [end] 상세검색버튼
-
-//팝업화면 열기/닫기버튼***********************
-    /* if( $('.cnt').find('.tbodywrap').hasClass('close')) $('tbl_wrap').css('height',$('.tbl_frm tr').outerHeight()+1); */
-    
-    
-    $('.pop_wrap .btn_acco').on('click',function(){
-        if($(this).closest('.cnt').find('.tbodywrap').hasClass('open')){
-            $(this).closest('.cnt').find('.tbl_wrap').animate({height:0},200);
-            $(this).closest('.cnt').find('.tbodywrap').removeClass('open').addClass('close');
-            $(this).closest('.cnt').find('.ico_btn_acco').css('background-position','-278px 3px');
-        } else if ($(this).closest('.cnt').find('.tbodywrap').hasClass('close')){
-            $(this).closest('.cnt').find('.tbl_wrap').animate({height:$(this).closest('.cnt').find('.tbodywrap').outerHeight()+1},200);
-            $(this).closest('.cnt').find('.tbodywrap').removeClass('close').addClass('open');
-            $(this).closest('.cnt').find('.ico_btn_acco').css('background-position','-248px 3px');
-        }
-    });
-    
-// [end] 팝업화면 열기/닫기 버튼
-
-
-});//[end] $function
+});
 
 
 function _tabClick(_attrID){
@@ -342,7 +322,4 @@ function navSel(_attrID){
 //윈도우팝업
 function openPopup(URL,specs){
     window.open(URL,name,specs);
-
 }
-
-

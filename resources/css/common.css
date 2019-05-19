@@ -47,6 +47,11 @@ input[type="checkbox"]:checked:disabled{background-position:-200px 0;}
 .inp_wrap.type_col{display:table;width:100%;}
 .inp_wrap.type_col input, .inp_wrap.type_col span{display:table-cell;vertical-align:middle;}
 .inp_wrap.type_col span{width:40px;text-align:center;}
+.inp_wrap.type_unit .inp_unit{width:45%;text-align:right;}
+.inp_wrap.type_unit span{vertical-align:middle;}
+.inp_wrap.inp_time .inp_area{display:table;table-layout:fixed;}
+.inp_wrap.inp_time .inp_area .inp_txt, .inp_wrap.inp_time .inp_area .sel{display:table-cell;}
+.inp_wrap.inp_time .inp_area .sel{}
 .btn_detail{position:relative;left:5px;width:95px;height:25px;background-color:#e5eaee;border:1px solid #d2d2d2;border-radius:3px;}
 .btn_detail_text {position:relative;left:-8px;color:#586065;}
 .ico_btn_detail{position:absolute;bottom:-1px;right:5px;width:25px;height:25px;background-position:-248px 3px;}
@@ -70,7 +75,7 @@ input[type="checkbox"]:checked:disabled{background-position:-200px 0;}
 
 /*table*/
 .tbl_wrap{display:block;overflow:hidden;width:100%;border-top:1px solid #b2b2b2;}
-.tbl_frm{display:block;overflow:hidden;position:relative;/* height:100%; */}
+.tbl_frm{overflow:hidden;position:relative;/* height:100%; */}
 .tbl_frm tr{width:100%;display:table;}
 .tbl_frm th, .tbl_frm td{position:relative;padding:4px 6px;border-bottom:1px solid #b2b2b2;border-right:1px solid #b2b2b2;box-sizing: border-box;}
 .tbl_frm th{width:8.3%;background-color:#eff1f2;font-weight:bold;color:#454545;text-align:left;}
@@ -84,6 +89,12 @@ input[type="checkbox"]:checked:disabled{background-position:-200px 0;}
 .tbl_frm [class^="inp_"], .tbl_frm .sel{width:100%;}
 .btn_search{position:absolute;right:6px;top:5px;width:24px;height:24px;}
 .tbl_frm .chk_area{margin-bottom:4px;}
+.form_multi{margin:0 -6px;}
+.form_multi .multi_row{display:table;padding:4px;width:100%;border-bottom:1px solid #b2b2b2;}
+.form_multi .multi_row:first-child{padding-top:0;}
+.form_multi .multi_row:last-child{padding-bottom:0;border-bottom:0;}
+.form_multi .multi_row .multi_label{display:table-cell;padding-left:4px;width:25%;}
+
 
 /*button*/
 button{font-size:13px;letter-spacing:-1px;}
@@ -98,7 +109,7 @@ button{font-size:13px;letter-spacing:-1px;}
 
 
 /* popup*/
-.pop_wrap{position:relative;padding:15px 0;width:100%;height:100%;}
+.pop_wrap{overflow:auto;position:relative;padding:15px 0;width:100%;height:100%;}
 .pop_header{padding:0 30px 15px;border-bottom:1px solid #000;}
 .pop_header .pop_tit{font-size:20px;font-weight:bold;}
 .pop_header .btn_popclose{display:inline-block;width:30px;height:30px;}
